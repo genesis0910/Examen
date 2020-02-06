@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
+        android:paddingLeft="20dp"
         android:textColor="@color/colorAccent" />
 
     <TextView
@@ -15,11 +16,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#5d5d5d"
+        android:paddingLeft="20dp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/mobile2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
         android:textColor="#5d5d5d"
         android:textStyle="bold" />
 </LinearLayout>
