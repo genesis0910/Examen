@@ -78,15 +78,11 @@ public class consulta extends AppCompatActivity {
 
                     for (int i=0; i<jsonObj2.length(); i++){
                         JSONObject c = jsonObj2.getJSONObject(i);
-                        String hora = c.getString("hora");
-                        String minuto = c.getString("minuto");
-                        String segundo = c.getString("segundo");
+                        String hora = c.getString("fecha");
 
                         HashMap<String, String> contact = new HashMap<>();
 
-                        contact.put("hora", hora);
-                        contact.put("minuto", minuto);
-                        contact.put("segundo", segundo);
+                        contact.put("fecha", hora);
 
                         // adding contact to contact list
                         contactList.add(contact);
@@ -156,8 +152,8 @@ public class consulta extends AppCompatActivity {
             super.onPostExecute(result);
             nombre.setText(text);
             ListAdapter adapter = new SimpleAdapter(consulta.this, contactList,
-                    R.layout.list_item, new String[]{ "hora","minuto","segundo"},
-                    new int[]{R.id.email, R.id.mobile, R.id.mobile2});
+                    R.layout.list_item, new String[]{ "fecha"},
+                    new int[]{R.id.email});
             lv.setAdapter(adapter);
         }
     }
